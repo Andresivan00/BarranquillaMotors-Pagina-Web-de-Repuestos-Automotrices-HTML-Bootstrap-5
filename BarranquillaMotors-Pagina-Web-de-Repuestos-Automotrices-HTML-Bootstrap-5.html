@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top"><!--Crea una barra de navegación que se expande en pantallas grandes (navbar-expand-lg), tiene un fondo oscuro (bg-dark), y se mantiene fija en la parte superior de la página mientras se hace scroll (fixed-top).-->
+        <div class="container"><!--Un contenedor que centraliza el contenido dentro de la barra de navegación para que tenga márgenes automáticos.-->
+            <a href="#" class="navbar-brand"><span class="text-primary">Barranquilla</span>Motors</a><!--Un enlace (que actúa como el nombre o marca del sitio) que contiene el texto "MexicanMotor". La clase navbar-brand lo estiliza para que se vea adecuado en la barra de navegación. El texto "Mexican" está resaltado en color azul (text-primary).-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbar-star" aria-controls="navbar-start" aria-expanded="false"
+              aria-label="Toggle navigation"><!--Un botón que aparece en pantallas pequeñas (como dispositivos móviles). Al hacer clic en él, se despliega o colapsa el menú de navegación. Los atributos aria-* mejoran la accesibilidad de la página.-->
+            <span class="navbar-toggler-icon" ></span><!--El ícono de hamburguesa (tres líneas horizontales) que aparece dentro del botón de navegación cuando se ve en dispositivos móviles.-->
+            </button>
+            
+      <!-- Menú de navegación -->
+        <div class="collapse navbar-collpase" id="navbar-start"></div><!--Este contenedor se utiliza para el menú de navegación que se despliega o colapsa (se esconde) en pantallas más pequeñas.
+        La clase collapse navbar-collapse aplica estilos de Bootstrap para manejar el comportamiento colapsable.
+        El atributo id="navbar-start" vincula este contenedor con el botón de navegación (el botón de hamburguesa) definido anteriormente en data-bs-target="#navbar-start".-->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><!--Define una lista no ordenada (<ul>) que actúa como un contenedor para los enlaces de navegación.
+            La clase navbar-nav estiliza la lista para que se integre con la barra de navegación.
+            La clase ms-auto (margin-start-auto) alinea los elementos de la lista a la derecha de la barra de navegación.
+            mb-2 y mb-lg-0 ajustan los márgenes inferiores para diferentes tamaños de pantalla.-->
+            <li class="nav-item"><!--Cada <li> es un elemento de la lista que contiene un enlace de navegación.-->
+                <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contactos</a>
+                <!--Cada enlace (<a>) dentro de la lista es un elemento clicable que redirige al usuario a una sección de la página o a otra página.
+                  La clase nav-link estiliza los enlaces para que se vean como parte de la barra de navegación.
+                  El atributo href="#" define el destino del enlace; en este caso, el símbolo # indica que no se redirige a ninguna sección específica, pero normalmente se reemplaza con un identificador o URL.-->
+            </li>
+          </ul>
+        </div>
+    </nav>
+    
+  <!-- Carrusel de imágenes -->
+    <div id="carouselE1" class="carousel slide" data-bs-ride="carousel"> 
+      <!--id="carouselE1": Identificador único para el carrusel, que permite referenciarlo en otras 
+      partes del código, como los indicadores o controles.
+      class="carousel slide": Aplica las clases de Bootstrap para crear un carrusel con deslizamiento.
+      data-bs-ride="carousel": Configura el carrusel para que cambie automáticamente entre imágenes (comportamiento de "autoplay").-->
+    <!-- Indicadores del carrusel -->
+      <div class="carousel-indicators"><!--Este contenedor agrupa los botones que actúan como indicadores de las diapositivas.-->
+            <button type="button" data-bs-target="#carouselE1"
+                    data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="slide 1"
+            ></button>
+            
+            <button type="button" data-bs-target="#carouselE1"
+                    data-bs-slide-to="1" 
+                    aria-label="slide 2"
+            ></button>  
+
+            <button type="button" data-bs-target="#carouselE1"
+                 data-bs-slide-to="2" 
+                 aria-label="slide 3"
+            ></button>     
+            <!-- type="button": Define que el elemento es un botón.
+             data-bs-target="#carouselE1": Vincula el botón al carrusel identificado con id="carouselE1".
+             data-bs-slide-to="0": Indica que este botón lleva a la primera diapositiva. Los valores 0, 1, 2, etc., representan las diferentes diapositivas en orden.
+             class="active": Se utiliza para marcar el indicador activo de la diapositiva actual (solo se aplica al primer botón).
+             aria-current="true": Define que esta diapositiva es la actual para los usuarios con lectores de pantalla (mejora la accesibilidad).
+             aria-label="slide 1": Etiqueta que describe la diapositiva correspondiente (también mejora la accesibilidad).-->
+         </div>   
+
+  <!-- Contenido del carrusel -->
+    <div  class="carousel-inner"><!--Agrupa todas las diapositivas del carrusel.
+      Es un elemento necesario para que Bootstrap identifique y gestione las diapositivas.-->
+      <!-- Primera diapositiva -->
+         <div  class="carousel-item active"><!--class="carousel-item": Define esta sección como una diapositiva dentro del carrusel.
+          class="active": Marca esta diapositiva como la que aparece inicialmente cuando el carrusel se carga.-->     
+            <img src="img/car1.jpg" class="d-block w-100" alt=""><!--src="img/car1.jpg": Ruta de la imagen que se muestra en la diapositiva.
+            class="d-block w-100":
+            d-block: Hace que la imagen sea de tipo bloque.
+            w-100: Hace que la imagen ocupe el 100% del ancho del contenedor.
+            alt="": Espacio para texto alternativo (vacío en este caso) que describe la imagen para accesibilidad.-->
+            <div class="carousel-caption"><!--Este contenedor sirve para mostrar información superpuesta en la imagen.-->
+                  <h5>Los mejores motores</h5>
+                  <p>
+                   En BarrabquillaMotors tenemos motores de alta calidad y repuestos esenciales para diversos vehículos, garantizando durabilidad 
+                   y eficiencia. Encontrarás motores de repuesto completos, componentes como pistones, bielas y válvulas, además de soluciones 
+                   para reparaciones o reemplazos de motor. Nos destacamos por nuestra calidad superior, amplia variedad de repuestos, asesoría 
+                   especializada y precios competitivos. Visítanos para mantener tu vehículo en excelente estado en todos los meses del año.
+                  </p>
+                <p><a href="#" class="btn btn-primary mt-3">Leer Mas</a></p><!--<a href="#">: Un enlace (actualmente sin destino) que actúa como botón.
+                  class="btn btn-primary mt-3":
+                  btn btn-primary: Aplica estilos predefinidos para botones de Bootstrap.
+                  mt-3: Añade un margen superior para espaciar el botón del texto anterior.
+                  El botón puede redirigir al usuario a una página o sección para obtener más información.-->
+            </div>
+          </div> 
+   
+
+        <!-- Segunda diapositiva -->
+            <div  class="carousel-item"><!--Define esta sección como una diapositiva dentro del carrusel.
+              Nota: A diferencia de la primera diapositiva, no lleva la clase active, ya que no es la diapositiva inicial que se muestra.-->   
+                <img src="img/car2.png" class="d-block w-100" alt=""><!--src="img/car2.png": Ruta de la imagen que se muestra en esta diapositiva.
+                class="d-block w-100":
+                d-block: Hace que la imagen sea de tipo bloque.
+                w-100: Hace que la imagen ocupe todo el ancho del contenedor.
+                alt="": Espacio para texto alternativo (vacío en este caso) que describe la imagen para accesibilidad.-->
+                <div class="carousel-caption"><!--Contiene el contenido textual superpuesto en la imagen.-->
+                      <h5>Repuestos de todo tipo</h5>
+                      <p>
+                        Ofrecemos repuestos de alta calidad para todas las marcas y modelos, garantizando el rendimiento, seguridad y durabilidad de tu vehículo. 
+                        Contamos con un catálogo que incluye piezas para motores, frenos, suspensión, sistemas eléctricos, filtros, lubricantes y accesorios.
+                        Nos distinguimos por nuestra variedad de productos, calidad garantizada, y precios competitivos. Además, nuestro equipo de expertos 
+                        te ofrece asesoría especializada para encontrar las piezas adecuadas, y nos comprometemos a brindarte un servicio excepcional 
+                        con atención personalizada.
+                      </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Leer Mas</a></p><!--<a href="#">: Un enlace (actualmente sin destino) que actúa como botón.
+                      class="btn btn-primary mt-3":
+                      btn btn-primary: Aplica estilos predefinidos para botones de Bootstrap.
+                      mt-3: Añade un margen superior para espaciar el botón del texto anterior.
+                      El botón puede redirigir al usuario a una página o sección para obtener más información.-->
+                    </div>
+                  </div>
+           
+
+      <!-- Tercera diapositiva -->
+        <div class="carousel-item"><!--Define esta sección como una diapositiva dentro del carrusel.
+          Nota: A diferencia de la primera diapositiva, no lleva la clase active, ya que no es la diapositiva inicial que se muestra.-->       
+            <img src="img/car3.jpg" class="d-block w-100" alt=""><!--src="img/car3.jpg": Ruta de la imagen que se muestra en esta diapositiva.
+            class="d-block w-100":
+            d-block: Hace que la imagen sea de tipo bloque.
+            w-100: Hace que la imagen ocupe todo el ancho del contenedor.
+            alt="": Espacio para texto alternativo (vacío en este caso) que describe la imagen para accesibilidad.-->
+            <div class="carousel-caption"><!--Contiene el contenido textual superpuesto en la imagen.-->
+                  <h5>Vehiculos electricos</h5>
+                  <p>
+                    Recientemente manejamos tambien una linea de productos para vehículos eléctricos, ofreciendo repuestos y componentes de alta calidad. Nos especializamos 
+                    en baterías, sistemas de tracción, componentes electrónicos, frenos regenerativos y accesorios de personalización, todos adaptados 
+                    a las necesidades de los autos eléctricos. Con un enfoque en innovación y sostenibilidad, garantizamos productos duraderos, asesoría 
+                    profesional y un compromiso con soluciones ecológicas. Visítanos para mantener tu vehículo eléctrico en excelente estado.
+                  </p>
+                <p><a href="#" class="btn btn-primary mt-3">Leer Mas</a></p><!--<a href="#">: Un enlace (actualmente sin destino) que actúa como botón.
+                  class="btn btn-primary mt-3":
+                  btn btn-primary: Aplica estilos predefinidos para botones de Bootstrap.
+                  mt-3: Añade un margen superior para espaciar el botón del texto anterior.
+                  El botón puede redirigir al usuario a una página o sección para obtener más información.-->
+            </div>
+          </div>
+        </div>
+  
+
+    <!-- Controles del carrusel -->
+     <button class="carousel-control-prev" type="button" data-vs-target="#carouselE1"
+             data-bs-slide="prev"><!--class="carousel-control-prev": Aplica los estilos predeterminados de Bootstrap para el botón de control que mueve el carrusel hacia atrás.
+             type="button": Define el botón como un elemento interactivo.
+             data-bs-target="#carouselE1": Indica el ID del carrusel al que controla este botón (carouselE1 en este caso).
+             data-bs-slide="prev": Especifica que este botón hará que el carrusel retroceda a la diapositiva anterior.-->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><!--class="carousel-control-prev-icon": Aplica un ícono visual (normalmente una flecha apuntando hacia la izquierda).
+        aria-hidden="true": Oculta el ícono para lectores de pantalla, ya que es decorativo.-->
+        <span class="visually-hidden">Previous</span><!--Proporciona una etiqueta de texto (oculta visualmente) que describe la función del botón para lectores de pantalla.-->
+        </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselE1"
+        data-bs-slide="next"> 
+        <!--class="carousel-control-next": Aplica los estilos predeterminados de Bootstrap para el botón de control que mueve el carrusel hacia adelante.
+        type="button": Define el botón como interactivo.
+        data-bs-target="#carouselE1": Indica que este botón controla el carrusel con ID carouselE1.
+        data-bs-slide="next": Especifica que este botón moverá el carrusel a la siguiente diapositiva.-->
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><!--class="carousel-control-next-icon": Aplica un ícono visual (normalmente una flecha apuntando hacia la derecha).
+        aria-hidden="true": Oculta el ícono de los lectores de pantalla.-->
+        <span class="visually-hidden">Next</span><!--Proporciona una etiqueta de texto oculta para describir la función del botón.-->
+        </button>
+      
+      </div> 
+
+    <!-- Sección de servicios -->
+      <section class="services"><!--Asigna una clase para aplicar estilos específicos a esta sección.-->
+      <div class="container"><!--Contiene el contenido dentro de un contenedor centrado, con márgenes adecuados.-->
+        <div class="row"><!--Crea una fila que contiene las tarjetas de servicios. Es parte del sistema de grillas de Bootstrap.-->
+         <!-- Tarjeta de servicio 1 -->
+          <div class="col-12 col-md-12 col-lg-4 mb-3"><!--Define el tamaño de la tarjeta en la grilla de Bootstrap:
+            Ocupa todo el ancho en pantallas pequeñas (col-12).
+            Ocupa 1/3 del ancho en pantallas grandes (col-lg-4).
+            mb-3: Añade un margen inferior de 3 unidades para separar esta tarjeta de otras.-->
+              <div class="card text-white text-center bg-car1 pb-2"><!--Utiliza la clase de Bootstrap para diseñar una tarjeta.
+                text-white: Aplica color blanco al texto.
+                text-center: Centra el contenido del texto.
+                bg-car1: Aplica un fondo personalizado (posiblemente definido en los estilos CSS).
+                pb-2: Añade un margen interno (padding) inferior de 2 unidades.-->
+                <div class="card-body">
+                  <h3 class="card-title">Faros antiniebla</h3>
+                  <p>Conduce con confianza incluso en las peores condiciones climáticas con nuestros 
+                    faros antiniebla diseñados para ofrecer un rendimiento superior. Fabricados con 
+                    materiales resistentes y tecnología avanzada, estos faros garantizan una iluminación 
+                    precisa y potente.
+                  </p>
+                  <button class="btn bg-primary text-white">Leer mas</button>
+                  <!--class="btn bg-primary text-white": Aplica estilos de Bootstrap para un botón:
+                  Fondo azul (bg-primary).
+                  Texto blanco (text-white).
+                  Texto del botón: "Leer más" para invitar al usuario a obtener más información. -->
+                </div>
+              </div>
+            </div>
+
+        <!-- Tarjeta de servicio 2 -->
+          <div class="col-12 col-md-12 col-lg-4 mb-3">
+            <!--col-12: En dispositivos pequeños, ocupa todo el ancho disponible.
+            col-md-12: En dispositivos medianos, también ocupa todo el ancho.
+            col-lg-4: En dispositivos grandes, ocupa un tercio del ancho total.
+            mb-3: Añade un margen inferior para separar esta tarjeta de otras.-->
+            <div class="card text-white text-center bg-car2 pb-2">
+              <!--card: Utiliza el componente de tarjeta de Bootstrap.
+              text-white: Aplica color blanco al texto, asegurando contraste sobre un fondo oscuro.
+              text-center: Centra el contenido textual horizontalmente.
+              bg-car2: Clase personalizada que define el fondo de la tarjeta. Podría ser un color, imagen o degradado configurado en el CSS.
+              pb-2: Añade margen interno inferior (padding) de 2 unidades.-->
+              <div class="card-body">
+                <h3 class="card-title">Pintado moderno</h3>
+                <p>Dale nueva vida a tus espacios con nuestro servicio de pintado moderno, ideal para hogares, oficinas y locales comerciales. 
+                  Con técnicas innovadoras y acabados impecables, creamos ambientes únicos que reflejan tu estilo y personalidad.
+                </p>
+                <button class="btn bg-primary text-white">Leer mas</button>
+                <!--Clase btn aplica estilos básicos para un botón.
+                bg-primary: Aplica un color de fondo azul (estilo Bootstrap).
+                text-white: Asegura que el texto sea blanco para mayor legibilidad.-->
+              </div>
+            </div>
+        </div>
+
+      <!-- Tarjeta de servicio 3 -->
+        <div class="col-12 col-md-12 col-lg-4 mb-3">
+            <!--col-12: En dispositivos pequeños, ocupa todo el ancho disponible.
+            col-md-12: En dispositivos medianos, también ocupa todo el ancho.
+            col-lg-4: En dispositivos grandes, ocupa un tercio del ancho total.
+            mb-3: Añade un margen inferior para separar esta tarjeta de otras.-->
+          <div class="card text-white text-center bg-car3 pb-2">
+              <!--card: Utiliza el componente de tarjeta de Bootstrap.
+              text-white: Aplica color blanco al texto, asegurando contraste sobre un fondo oscuro.
+              text-center: Centra el contenido textual horizontalmente.
+              bg-car2: Clase personalizada que define el fondo de la tarjeta. Podría ser un color, imagen o degradado configurado en el CSS.
+              pb-2: Añade margen interno inferior (padding) de 2 unidades.-->
+            <div class="card-body">
+              <h3 class="card-title">Tapisado personalizado</h3>
+              <p>Renueva el interior de tu automóvil con nuestro servicio de tapizado personalizado. Diseñado para 
+                quienes buscan estilo, confort y durabilidad, nuestro trabajo transforma el interior de tu vehículo 
+                en un espacio que refleja tu personalidad.
+              </p>
+              <button class="btn bg-primary text-white">Leer mas</button>
+                <!--Clase btn aplica estilos básicos para un botón.
+                bg-primary: Aplica un color de fondo azul (estilo Bootstrap).
+                text-white: Asegura que el texto sea blanco para mayor legibilidad.-->
+            </div>
+          </div>
+      </div>
+        </div>
+
+      </div>
+
+      </section>
+
+    <!-- Sección de iconos -->
+      <section class="section-icons"><!--Define una sección específica para los íconos.-->
+        <div class="row"><!--Inicia una fila de Bootstrap, permitiendo organizar los íconos en un diseño de cuadrícula.-->
+        <!-- Icono 1 -->
+          <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <!--col-12: En dispositivos pequeños (teléfonos), ocupa todo el ancho disponible.
+            col-md-12: En dispositivos medianos (tabletas), también ocupa todo el ancho.
+            col-lg-4: En dispositivos grandes (escritorios), ocupa un tercio del ancho.
+            box-icons: Clase personalizada que se puede usar para añadir estilos específicos a cada bloque de ícono.-->
+            <div class="d-flex align-items-center">
+              <!--d-flex: Activa el uso de flexbox para alinear los elementos horizontalmente.
+              align-items-center: Asegura que los elementos estén centrados verticalmente.-->
+                 <i class="bi bi-airplane"></i>
+                 <!--<i>: Contenedor de un ícono.
+                  bi bi-airplane: Es una clase del framework Bootstrap Icons, que proporciona íconos listos para usar.
+                  En este caso, representa un avión, que simboliza el concepto de "envío".-->
+            <div class="ms-4"><!--Añade un margen a la izquierda del texto para separarlo del ícono (utilizando la clase Bootstrap ms-4).-->
+              <h3>Envio gratis</h3>
+               <p>
+                Disfruta envío gratis en compras seleccionadas. Ahorra mientras equipas tu auto con lo mejor. 
+                </p>
+            </div>
+            </div>
+           </div>
+            
+          <!-- Icono 2 -->
+           <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <!--Organiza el diseño en una cuadrícula responsiva usando clases de Bootstrap:
+            col-12: Ocupa todo el ancho en pantallas pequeñas.
+            col-md-12: También ocupa todo el ancho en pantallas medianas.
+            col-lg-4: En pantallas grandes, ocupa un tercio del ancho total.
+            box-icons:
+            Clase personalizada para añadir estilos específicos a cada bloque de ícono.-->
+            <div class="d-flex align-items-center">
+              <!--d-flex: Activa el uso de Flexbox, lo que organiza los elementos de forma horizontal.
+              align-items-center: Alinea verticalmente los elementos dentro del contenedor, logrando que el ícono y el texto estén centrados.-->
+                 <i class="bi bi-cash-coin"></i>
+                 <!--<i>: Es el contenedor del ícono.
+                  bi bi-cash-coin: Es una clase de Bootstrap Icons, que proporciona un ícono de monedas.
+                  Este ícono simboliza conceptos financieros, como reembolsos o devoluciones de dinero.-->
+            <div class="ms-4"><!--Aplica un margen a la izquierda del texto para separarlo visualmente del ícono.-->
+              <h3>Rembolso</h3>
+               <p>
+                Ofrecemos reembolsos dentro de 30 días para productos sin usar y en su empaque original. 
+                </p>
+            </div>
+            </div>
+           </div>
+
+          <!-- Icono 3 -->
+           <div class="col-12 col-md-12 col-lg-4 box-icons">
+            <!--Usando clases de Bootstrap, este contenedor es responsivo:
+            col-12 y col-md-12: Ocupa todo el ancho en pantallas pequeñas y medianas.
+            col-lg-4: Ocupa un tercio del ancho total en pantallas grandes.
+            box-icons: Clase personalizada para estilizar este bloque de ícono.-->
+            <div class="d-flex align-items-center">
+              <!--d-flex: Activa el uso de Flexbox para organizar los elementos de manera horizontal.
+              align-items-center: Centra verticalmente los elementos dentro del contenedor.-->
+                 <i class="bi bi-gift-fill"></i>
+                 <!--<i>:Representa un ícono.
+                  bi bi-gift-fill:Es una clase de Bootstrap Icons que genera un ícono de regalo.
+                  Este ícono es ideal para representar promociones, bonificaciones o regalos asociados al servicio.-->
+            <div class="ms-4"><!--Aplica un margen izquierdo al texto para separarlo visualmente del ícono.-->
+              <h3>Regalo</h3>
+               <p>
+                Recibe un regalo especial en compras seleccionadas. Premia tu auto con accesorios únicos. 
+                </p>
+            </div>
+            </div>
+           </div>
+        </div>
+      </section>
+
+    <!-- Sección de productos -->
+      <section class="product text-white">
+        <!--Define un bloque semántico que agrupa contenido relacionado con los productos.
+        class="product" puede incluir estilos específicos, como diseño y colores, que hacen que la sección sea visualmente distinta.-->
+        <div class="conteiner"><!--Debería ser container, que es una clase de Bootstrap para envolver el contenido y alinear todo correctamente en el diseño responsivo.-->
+        <!-- Encabezado de la sección -->
+          <div class="row"><!--Activa un sistema de cuadrícula para organizar el contenido de esta sección.-->
+            <div class="col-md-12"><!--Ocupa el ancho completo de la pantalla en cualquier tamaño de dispositivo (12 columnas).-->
+              <div class="section-header text-center pb-5">
+                <!--section-header: Clase personalizada para definir estilos únicos del encabezado (por ejemplo, fuentes, tamaños o márgenes).
+                text-center: Centra el texto del encabezado horizontalmente.
+                pb-5: Añade un margen inferior grande (padding-bottom) para espaciar el encabezado de los productos.-->
+                <h2>Productos</h2>
+                <p>
+                  En nuestra tienda encontrarás una amplia variedad de repuestos <br>   de autos de alta calidad,    
+                  diseñados para garantizar <br> el rendimiento y la seguridad de tu vehículo
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <!-- Tarjetas de productos -->
+          <div class="row"><!--Activa una fila dentro del sistema de cuadrícula de Bootstrap para organizar las tarjetas en un diseño responsivo.
+            Cada tarjeta será una columna dentro de esta fila.-->
+          <!-- Producto 1 -->
+            <div class="col-12 col-md col-lg-3">
+              <!--col-12: La tarjeta ocupa todo el ancho de la pantalla en dispositivos pequeños.
+              col-md: Adaptación en pantallas medianas (sin especificar el número, toma un tamaño automático).
+              col-lg-3: En dispositivos grandes, ocupa 3 de las 12 columnas disponibles (1/4 del ancho).-->
+                 <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                  <!--<div class="card">:Crea un contenedor de estilo definido (tarjeta) para encapsular la información del producto.
+                  Clases aplicadas: bg-Secondary: Fondo gris para la tarjeta.
+                  shadow-sm: Aplica una ligera sombra, dando un efecto de profundidad.
+                  border-0: Elimina el borde de la tarjeta.
+                  px-2 py-3: Añade un margen interno (padding) horizontal y vertical para espaciar el contenido.
+                  mb-4: Añade margen inferior para separar esta tarjeta de otras.-->
+                     <div class="text-center"><!--Centra horizontalmente la imagen del producto.-->
+                        <img src="img/pr1.png" alt="">
+                     </div>
+                     <div class="card-body"><!--Contiene la información textual y el botón de acción dentro de la tarjeta.-->
+                      <h5 class="card-tittle">Rin - WH553-16S-BS</h5>
+                      <p>
+                        La cubierta de rueda de 16 pulgadas Spyder Performance con acabado en dos tonos negro/plata es fácil 
+                        de instalar y compatible con la mayoría de vehículos nacionales y extranjeros con ruedas delanteras 
+                        y traseras. Fabricada en plástico ABS resistente a la oxidación, cuenta con un anillo de retención 
+                        ajustable que garantiza un ajuste perfecto. Aplicación universal.
+                      </p>
+                      <a href="#" class="btn btn-primary">Saber mas</a>
+                      <!--href="#": Enlaza a una página con más información o acciones (puede reemplazarse con una URL real).
+                      btn btn-primary: Usa un estilo de botón predefinido en Bootstrap con colores destacados.-->
+                     </div>
+                 </div>
+            </div>
+
+          <!-- Producto 2 -->
+            <div class="col-12 col-md col-lg-3">
+              <!--col-12: La tarjeta ocupa todo el ancho en dispositivos pequeños.
+              col-md: En pantallas medianas, ocupa un tamaño automático.
+              col-lg-3: En pantallas grandes, ocupa 1/4 del ancho total.-->
+              <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                <!--bg-Secondary: Fondo gris
+                shadow-sm: Pequeña sombra que agrega profundidad.
+                border-0: Sin bordes para un diseño más limpio.
+                px-2 py-3 mb-4: Márgenes internos y externos para espaciado.-->
+                  <div class="text-center"><!--Centra la imagen horizontalmente.-->
+                     <img src="img/pr2.png" alt="">
+                  </div>
+                  <div class="card-body"><!--Contiene la información textual y el botón del producto.-->
+                   <h5 class="card-tittle">Rin - Pro Comp PXA7069-6883</h5>
+                   <p>
+                    El rin Pro Comp destaca por su diseño deportivo de rayos múltiples, acabado en negro mate o con 
+                    detalles cromados, y su construcción ligera en aleación de aluminio resistente a la corrosión. 
+                    Compatible con camionetas y SUV como Toyota, Nissan, GMC, Chevrolet y Ford, ofrece dimensiones 
+                    de 16x8 pulgadas, offset de -12 mm y patrón de pernos 6x5.5 pulgadas.
+                   </p>
+                   <a href="#" class="btn btn-primary">Saber mas</a>
+                   <!--href="#": Enlace que puede redirigir a más información o una acción específica.
+                   btn btn-primary: Estilo predefinido de Bootstrap con un diseño llamativo.-->
+                  </div>
+              </div>
+         </div>
+
+        <!-- Producto 3 -->
+         <div class="col-12 col-md col-lg-3">
+          <!--col-12: La tarjeta ocupa el ancho completo en pantallas pequeñas.
+          col-md: En pantallas medianas, el tamaño se ajusta automáticamente.
+          col-lg-3: En pantallas grandes, ocupa un cuarto del ancho total (25%), permitiendo que 4 tarjetas se alineen en una fila.-->
+          <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+            <!--card: Indica que el contenido está dentro de una tarjeta.
+            bg-Secondary: Aplica un fondo gris
+            shadow-sm: Agrega una ligera sombra para dar profundidad visual.
+            border-0: Quita los bordes de la tarjeta para un diseño más limpio.
+            px-2 py-3 mb-4: Añade márgenes internos y externos para separar y espaciar los elementos.-->
+              <div class="text-center"><!--Centra la imagen horizontalmente.-->
+                 <img src="img/pr3.png" alt="">
+              </div>
+              <div class="card-body"><!--Contenedor del contenido textual.-->
+               <h5 class="card-tittle">Volante con adaptador de buje - Club Car Precedent - Negro y plateado 2004+</h5>
+               <p>
+                Carrito de golf Club Car Precedent con volante en acabado cromado y adaptador de cubo compatible con modelos 
+                del 2004 en adelante. Incluye cableado negro y plateado, cuerno y llave Allen para ensamblar el volante. 
+                Este producto es exclusivo para el modelo Club Car Precedent.
+               </p>
+               <a href="#" class="btn btn-primary">Saber mas</a>
+               <!--href="#": Enlace que puede dirigirse a una página específica del producto.
+               btn btn-primary: Aplica un estilo predefinido para botones en Bootstrap, con un color destacado.-->
+              </div>
+          </div>
+     </div>
+
+    <!-- Producto 4 -->
+     <div class="col-12 col-md col-lg-3">
+      <!--col-12: Ocupa todo el ancho en pantallas pequeñas.
+      col-md: Ajusta el tamaño automáticamente en pantallas medianas.
+      col-lg-3: Ocupa un 25% del ancho total en pantallas grandes, permitiendo que hasta 4 productos se alineen en una fila.-->
+      <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+        <!--card: Indica que el contenido está dentro de una tarjeta estilizada.
+        bg-Secondary: Establece un fondo gris para la tarjeta.
+        shadow-sm: Agrega una sombra ligera para mayor profundidad visual.
+        border-0: Elimina bordes visibles para un diseño más limpio.
+        px-2 py-3 mb-4: Añade márgenes internos y externos para espaciar y organizar la tarjeta.-->
+          <div class="text-center"><!--Centra la imagen horizontalmente dentro del contenedor.-->
+             <img src="img/pr4.png" alt="">
+          </div>
+          <div class="card-body"><!--Contenedor para el texto y el botón de acción.-->
+           <h5 class="card-tittle">Motor - Plaxo Kits de modelo mini V8 funcionales</h5>
+           <p>
+            Los motores en miniatura V8 de Plaxo ofrecen un fascinante kit de construcción para niños y adultos, ideal 
+            para proyectos RC y modelos de coches. Fabricados en metal, incluyen partes del motor (parcial), con dimensiones 
+            de 2,52 x 2,36 x 2,17 pulgadas. Perfectos para ensamblar motores funcionales con estilo moderno, son una experiencia 
+            única.</p>
+           <a href="#" class="btn btn-primary">Saber mas</a>
+           <!--href="#": Representa un enlace (actualmente no funcional) que podría llevar a la página de detalles del producto.
+           btn btn-primary: Aplica un estilo de botón con un color destacado.-->
+          </div>
+      </div>
+ </div>
+
+<!-- Producto 5 -->
+ <div class="col-12 col-md col-lg-3">
+  <!--col-12: El producto ocupa el ancho completo en pantallas pequeñas.
+  col-md: En pantallas medianas, ajusta automáticamente su tamaño según el diseño responsivo.
+  col-lg-3: En pantallas grandes, ocupa un cuarto del ancho, permitiendo que cuatro productos se alineen horizontalmente.-->
+  <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+    <!--card: Contenedor estilizado de la tarjeta.
+    bg-secondary: Aplica un fondo gris a la tarjeta.
+    shadow-sm: Añade una sombra sutil para dar un efecto de elevación.
+    border-0: Elimina los bordes visibles.
+    px-2 py-3 mb-4: Aplica márgenes internos (padding) y externos (margen inferior) para espaciar los elementos y las tarjetas.-->
+      <div class="text-center"><!--Centra la imagen horizontalmente.-->
+         <img src="img/pr5.png" alt="">
+      </div>
+      <div class="card-body"><!--Contenedor del texto y el botón.-->
+       <h5 class="card-tittle">Rin - Deportivo de aluminio modelo airvent 14x6.0 4x114 color dark chrome maquinado juego de 4 rines</h5>
+       <p>
+        El rin modelo AIRVENT R14 de la marca RADER, fabricado en aluminio de alta resistencia, destaca por su acabado metalizado en color 
+        negro cromo maquinado. Con un peso de 9 kg y dimensiones de 35,56 x 20,32 x 35,56 cm, es compatible con doble barrenación 4/114, 
+        ideal para automóviles con medida R14.
+       </p>
+       <a href="#" class="btn btn-primary">Saber mas</a>
+       <!--href="#": Representa un enlace que actualmente no lleva a ningún lado.
+       btn btn-primary: Aplica un diseño estilizado al botón, destacándolo con un color primario.-->
+      </div>
+  </div>
+</div>
+
+<!-- Producto 6 -->
+ <div class="col-12 col-md col-lg-3">
+  <!--col-12: El producto ocupa el ancho completo en pantallas pequeñas.
+  col-md y col-lg-3: Ajusta automáticamente el tamaño del contenedor para pantallas medianas y grandes, mostrando hasta cuatro productos en una fila.-->
+  <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+    <!--card: Representa una tarjeta de presentación estilizada.
+    bg-secondary: Da un fondo gris a la tarjeta.
+    shadow-sm: Añade una sombra sutil para un efecto de elevación.
+    border-0: Elimina bordes visibles.
+    px-2 py-3 mb-4: Añade márgenes internos y externos para el espaciado del contenido y la tarjeta.-->
+      <div class="text-center"><!--Centra la imagen horizontalmente dentro del contenedor.-->
+         <img src="img/pr6.png" alt="">
+      </div>
+      <div class="card-body"><!--Contenedor para el texto y el botón.-->
+       <h5 class="card-tittle">Cerradura de volante de gama alta 2 en 1 - ARTAGO 870 - sin o con alarma de 120 dB </h5>
+       <p>
+        El bloqueo de volante más avanzado combina una alarma de 120 dBA, función de advertencia previa, batería CR2 
+        de larga duración y diseño llamativo en amarillo. Fabricado en acero especial con llave de alta seguridad, 
+        incluye sistema Press & Click y brazos articulados para mayor protección. Desde 1976, Artago ofrece seguridad 
+        de alta gama.
+       </p>
+       <a href="#" class="btn btn-primary">Saber mas</a>
+       <!--href="#": El enlace no lleva a ninguna parte aún, pero se puede configurar para dirigir a una página de detalles del producto.
+       btn btn-primary: Aplica estilo al botón, destacándolo visualmente.-->
+      </div>
+  </div>
+</div>
+
+<!-- Producto 7 -->
+ <div class="col-12 col-md col-lg-3">
+  <!--col-12: Hace que el producto ocupe el ancho completo en dispositivos pequeños.
+  col-md y col-lg-3: Ajusta el tamaño en dispositivos medianos y grandes para mostrar hasta cuatro productos por fila.-->
+  <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+    <!--card: Define el diseño de la tarjeta.
+    bg-secondary: Proporciona un fondo gris.
+    shadow-sm: Añade una sombra ligera, creando un efecto visual de elevación.
+    border-0: Elimina bordes visibles.
+    px-2 py-3 mb-4: Añade espacio interno (padding) y espacio entre tarjetas (margin).-->
+      <div class="text-center"><!--Centra la imagen horizontalmente dentro de la tarjeta.-->
+         <img src="img/pr7.png" alt="">
+      </div>
+      <div class="card-body"><!--Contiene el texto y el botón de acción.-->
+       <h5 class="card-tittle">Rin - Konig DIAL IN Rueda negra brillante con pintado y tpms (15 x 8 pulgadas /0.157 x 3.937 in, 0.984 in de desplazamiento)</h5>
+       <p>
+        El rin modelo DIAL IN de KÖNIG, tamaño 15" x 8", está fabricado en aluminio con tecnología de formación de flujo, diseño de 12 radios y acabado en brillo 
+        negro. Con un peso de 12.25 libras, diámetro de círculo de paso de 100 mm, compensación de 25 mm y espacio trasero de 5.48".
+       </p>
+       <a href="#" class="btn btn-primary">Saber mas</a>
+       <!--href="#": Define un enlace que puede ser configurado para redirigir al detalle del producto.
+       btn btn-primary: Botón con estilo para atraer la atención.-->
+      </div>
+  </div>
+</div>
+
+<!-- Producto 8 -->
+ <div class="col-12 col-md col-lg-3">
+  <!--col-12: La tarjeta ocupa todo el ancho en dispositivos pequeños.
+  col-md col-lg-3: Ajusta el tamaño en pantallas medianas y grandes, permitiendo que hasta 4 tarjetas se muestren por fila.-->
+  <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+    <!--card: Define una tarjeta con estilo prediseñado.
+    bg-secondary: Aplica un fondo gris.
+    shadow-sm: Añade una sombra ligera para un efecto tridimensional.
+    border-0: Elimina bordes visibles para un diseño minimalista.
+    px-2 py-3 mb-4: Añade márgenes internos (padding) y externos (margin) para espaciar la tarjeta.-->
+      <div class="text-center"><!--Centra la imagen dentro del contenedor.-->
+         <img src="img/pr8.png" alt="">
+      </div>
+      <div class="card-body">
+       <h5 class="card-tittle">Rin - Deportivos 5/100 Avanza 22, polo,
+        ibiza ,vento ,corolla</h5>
+       <p>
+        Rines deportivos de 17" con ancho de 7.5", completamente nuevos y fabricados en aluminio. Compatibles con 
+        barrenación 5 x 114, ideales para modelos de KIA (Forte, Optima, Sportage), Hyundai (Elantra, Santa Fe), 
+        Toyota (Prius 2023+, RAV4), Nissan (Sentra, Tiida), Mazda (CX3, CX5), Honda (Accord, Civic, CR-V) y Mitsubishi 
+        Lancer. Juego de 4 rines Sportiva.
+       </p>
+       <a href="#" class="btn btn-primary">Saber mas</a>
+       <!--href="#": El enlace puede configurarse para redirigir a una página de detalles del producto.
+       btn btn-primary: Botón estilizado para llamar la atención.-->
+      </div>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+      </section>
+
+    <!-- Sección de banner -->
+      <section class="banner"> <!--La clase permite aplicar estilos personalizados específicos del banner mediante CSS.-->
+        <div class="container"><!--Contenedor central que asegura que el contenido esté alineado y con márgenes consistentes.-->
+          <div class="row"><!--Divide la sección en una fila para organizar el contenido.-->
+            <div class="col-md-12 text-center text-white">
+              <!--col-md-12: Define que la columna ocupa el 100% del ancho en dispositivos medianos y más grandes.
+              text-center: Alinea todo el contenido al centro para mejorar la estética y captar la atención.-->
+                <h2>Las mejores piezas para tu automovil</h2>
+                <p>
+                  
+                  En nuestra tienda, ofrecemos una amplia selección de repuestos de calidad para tu automóvil, <br>  
+                  incluyendo rines, baterías, filtros, frenos y más. Trabajamos con marcas confiables para garantizar <br>  
+                  productos duraderos y de alto rendimiento. Contamos con asesoría experta y precios competitivos.
+                </p>
+                <div>
+                  <img src="img/mo1.png" alt="">
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    <!-- Sección de contacto -->
+      <section class="contact"><!--Define una sección específica para el formulario de contacto, con una clase (contact) que permite aplicar estilos personalizados.-->
+        <div class="container mb-3 mb-lg-5">
+          <!--<div class="container">: Un contenedor centralizado que alinea y da estructura al contenido, asegurando márgenes consistentes.
+          mb-3 mb-lg-5: Clases de Bootstrap que añaden márgenes inferiores pequeños en dispositivos móviles (mb-3) y márgenes más grandes en pantallas grandes (mb-lg-5).-->
+          <div class="row"><!--Divide la sección en una fila para organizar el contenido.-->
+             <div class="col-md-12"><!-- Sección de contacto -->
+              <div class="section-header text-center pb-2 pb-lg-5">
+                <!--Define una cabecera para la sección con texto centrado (text-center) y espaciado en la parte inferior (pb-2 y pb-lg-5).-->
+                   <h2>Contacto</h2>
+                   <p>
+                    ¿Tienes dudas o necesitas ayuda con tus repuestos? Estamos aquí para ayudarte. <br> 
+                    Completa el formulario con tu nombre, email y mensaje, y nuestro equipo responderá a la brevedad. <br> 
+                    Tu satisfacción es nuestra prioridad. ¡No dudes en escribirnos y descubrir cómo podemos asistirte!
+                  </p>
+                  <div>
+              </div>
+              <div class="d-flex justify-content-center"><!--Utiliza un contenedor flexible de Bootstrap para centrar horizontalmente el formulario.-->
+                 <div class="col-12 col-md-12 col-lg-6 pt-4 pb-4"><!--Establece que el formulario ocupa todo el ancho en pantallas pequeñas y se ajusta a un ancho del 50% en pantallas grandes.-->
+                    <form action="#" class="bg-dark p-4 m-auto shadow-sm">
+                      <!--bg-dark: Fondo oscuro para el formulario.
+                      p-4: Padding interno (espaciado) de 4 unidades alrededor del formulario.
+                      m-auto: Margen automático para centrar vertical y horizontalmente.
+                      shadow-sm: Añade una sombra ligera para destacar el formulario.-->
+                      <div class="row">
+                         <div class="col-md-12">
+                             <div class="mb-3"><!--Añade margen inferior entre los campos.-->
+                              <input class="form-control" placeholder="Nombre" type="text" required><!--Campo de entrada para que el usuario escriba su nombre.-->
+                             </div>
+                         </div>
+                         <div class="col-md-12">
+                          <div class="mb-3">
+                           <input class="form-control" placeholder="Email" type="email" required><!--Campo para que el usuario introduzca su correo electrónico.-->
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="mb-3">
+                         <textarea class="form-control" placeholder="Mensaje" rows="3" required></textarea><!--Un área de texto para mensajes más largos.-->
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block mt-3" type="button" >Enviar</button>
+                    <!--Botón principal del formulario:
+                    btn btn-primary: Aplica el diseño de botón estándar de Bootstrap con un estilo principal (azul).
+                    btn-lg: Define un tamaño más grande para el botón.
+                    btn-block: Hace que el botón ocupe el ancho completo del contenedor.
+                    mt-3: Añade un margen superior para separar el botón del último campo.
+                    Atributo type="button": Se usa aquí como ejemplo. Para que funcione como botón de envío, se debería cambiar a type="submit".-->
+                      </div>
+                    </form>
+                 </div>
+              </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"> <!-- Sección 1 -->
+                    <h5>Acerca de nosotros</h5>
+                    <p>En BarranquillaMotors, contamos con más de 10 años de experiencia ofreciendo repuestos confiables, originales y genéricos de las principales marcas.  <br>  
+                      Nos destacamos por brindar soluciones rápidas y efectivas, con asesoría experta, precios competitivos.</p>
+                </div>
+                <div class="col-md-3"> <!-- Sección 2 -->
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Mision & Vision</a></li>
+                        <li><a href="#" class="text-white">Información legal</a></li>
+                        <li><a href="#" class="text-white">Servicio al cliente</a></li>
+                        <li><a href="#" class="text-white">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="text-white">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white">Cookies & datos de sitio</a></li>
+                        <li><a href="#" class="text-white">Política reembolsos & devoluciones </a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3"> <!-- Sección 3 -->
+                    <h5>Contactanos</h5>
+                    <p>1234 Calle ???, Barranquilla, Atlantico, 56789</p>
+                    <p>Email: Barranquillamotors@gmail.com</p>
+                    <p>Telefono: (+605) 3456780</p>
+                    <p>Celular: (+57) 3456789000</p>
+                    <div class="social-icons">
+                      <a href="mailto:barranquillamotors@gmail.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.552L0 4.697zm6.761 3.612L1.24 12.255A2 2 0 0 0 2 14h12a2 2 0 0 0 .76-1.745L9.24 8.309l-2.48 2.48zm9.239-3.612l-5.803 3.552L16 11.801V4.697z"/>
+                        </svg>
+                        <a href="https://www.facebook.com" target="_blank" class="social-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg>
+                      </a>
+                      <a href="https://www.whatsapp.com" target="_blank" class="social-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                          </svg>
+                      </a>
+                      <a href="https://www.twitter.com" target="_blank" class="social-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                          </svg>
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" class="social-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg>
+                      </a>
+                      <a href="https://www.linkedin.com" target="_blank" class="social-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                          </svg>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-md-3"> <!-- Sección 4 -->
+                    <h5>Nuestra locacion</h5>
+                    <div id="map-container" class="mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509377!2d144.96305791531696!3d-37.8141079797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d802d9e3e37f!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1616324322330!5m2!1sen!2sau" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 BarranquillaMotors. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+      </footer>
+
+
+<!-- Paquete de JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
