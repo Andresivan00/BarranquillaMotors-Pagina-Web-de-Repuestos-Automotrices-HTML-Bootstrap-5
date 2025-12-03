@@ -1,0 +1,218 @@
+/* Importar la fuente Poppins desde Google Fonts con varios grosores */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Aplicar la fuente Poppins a todos los elementos de la página */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilizar los enlaces de la barra de navegación */
+.navbar a {
+    font-weight: 600; /* Hacer el texto en negrita */
+    font-size: 18px; /* Establecer el tamaño de fuente a 18 píxeles */
+    color: white; /* Hacer el texto color blanco */
+ }
+
+/* Establecer una altura mínima para los elementos del carrusel */
+.carousel-item {
+    min-height: 400px;
+}
+
+/* Posicionar la leyenda del carrusel */
+.carousel-caption {
+    bottom: 220px; /* Mover la leyenda 220 píxeles desde la parte inferior */
+    z-index: 2; /* Asegurar que la leyenda aparezca por encima de otros elementos */
+}
+
+/* Estilizar el encabezado principal en la leyenda del carrusel */
+.carousel-caption h5 {
+    font-size: 70px; /* Tamaño de fuente grande para énfasis */
+    font-weight: 600; /* Hacer el texto seminegrita */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    margin-top: 25px; /* Agregar espacio encima del encabezado */
+ }
+
+/* Estilizar el párrafo en la leyenda del carrusel */
+ .carousel-caption p {
+    width: 60%; /* Establecer el ancho al 60% de su contenedor */
+    margin: 10px auto; /* Centrar el párrafo con márgenes de 10px arriba y abajo */
+    font-size: 18px; /* Establecer el tamaño de fuente a 18 píxeles */
+ }
+
+/* Agregar una superposición al carrusel */
+ .carousel-inner::before {
+    content: ""; /* Requerido para que el pseudo-elemento aparezca */
+    position: absolute; /* Posicionar la superposición de manera absoluta dentro del carrusel */
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); /* Superposición negra semitransparente */
+    z-index: 1; /* Asegurar que la superposición esté por encima del carrusel pero por debajo de la leyenda */
+ }
+
+/* Agregar relleno a la sección de servicios */
+.services {
+   padding: 80px 0;
+}
+
+/* Estilizar el fondo del elemento 1 del carrusel */
+.bg-car1 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(img/c1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+    button {
+        transform: translateY(10px);
+    }
+
+}
+
+
+/* Estilizar el fondo del elemento 2 del carrusel */
+.bg-car2 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(img/c2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px; 
+    button {
+        transform: translateY(34px);
+    }
+}
+
+/* Estilizar el fondo del elemento 3 del carrusel */
+.bg-car3 {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(img/c3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px; 
+
+}
+
+/* Estilizar los iconos en el cuadro */
+.box-icons i {
+    font-size: 40px;
+    padding: 40px;
+    
+}
+
+/* Estilizar los encabezados en el cuadro */
+.box-icons h3 {
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+
+/* Agregar relleno a la sección de productos */
+.product {
+    padding: 80px 0;
+    background-color: #202020;
+    padding: 30px; /* Marca un padding de las esquinas de la pagina */
+
+}
+
+
+
+/* Establecer las dimensiones de las imágenes de las tarjetas */
+.card img {
+    width: 150px;
+    height: 150px;
+    
+}
+
+/* Cambiar el color del texto del producto a blanco  */
+.product .card-body {
+    color: white !important; 
+
+}
+
+/* Estilizar la sección del banner */
+.banner {
+    padding: 50px 0;
+    margin-bottom: 80px;
+    background-color: #202020;
+}
+
+/* Estilizar el encabezado del banner */
+.banner h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Establecer el ancho de las imágenes del banner */
+.banner img {
+    width: 300px;
+}
+
+
+.social-icons {
+    text-align: left; /* Alinear el contenido a la izquierda */
+}
+
+.social-icons svg {
+    width: 24px;  /* Ajustar el ancho a 24 píxeles */
+    height: 24px; /* Ajustar la altura a 24 píxeles */
+    margin-right: 10px; /* Espacio entre los iconos */
+    color:#FFFFFF;
+}
+
+/* Efecto hover para iconos de redes sociales: cambiar el color de relleno a azul */
+.social-icons a:hover svg {
+    fill: #0000ff;
+}
+/* Adjust carousel item height for mobile */
+@media(max-width: 767px){
+    .carousel-item {
+       min-height: 500px; 
+    }
+
+/* Establecer la altura de las imágenes del carrusel para dispositivos móviles */
+    .carousel-item img{
+        height: 500px; 
+     }
+
+/* Ajustar la posición de la leyenda del carrusel para dispositivos móviles */     
+.carousel-caption{
+        bottom: 30px; 
+     }
+
+/* Reducir el tamaño de fuente del encabezado del carrusel para dispositivos móviles */
+.carousel-caption h5{
+        font-size: 50px; 
+        margin-top: 0;
+     }
+
+/* Ajustar el ancho y el tamaño de fuente del párrafo del carrusel para dispositivos móviles */
+.carousel-caption p{
+        width: 100%;
+        font-size: 16px;
+     }
+
+/* Reducir el relleno en la sección de servicios para dispositivos móviles */
+.services {
+       padding: 30px 0;
+     }
+
+/* Ajustar el relleno en la sección de productos para dispositivos móviles */
+.product {
+       padding: 30px 0 0 0;
+     }
+
+/* Reducir el margen inferior del banner para dispositivos móviles */
+     .banner {
+        margin-bottom: 30px;
+      }
+}
