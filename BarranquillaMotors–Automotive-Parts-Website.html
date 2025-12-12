@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <!-- Creates a navigation bar that expands on large screens (navbar-expand-lg), has a dark background (bg-dark), and stays fixed at the top of the page while scrolling (fixed-top). -->
+        <div class="container">
+            <!-- A container that centers the content within the navigation bar for automatic margins. -->
+            <a href="#" class="navbar-brand"><span class="text-primary">Barranquilla</span>Motors</a>
+            <!-- A link (acting as the site's name or brand) containing the text "BarranquillaMotors". The navbar-brand class styles it appropriately for the navigation bar. The text "Barranquilla" is highlighted in blue (text-primary). -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-start" aria-controls="navbar-start" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- A button that appears on small screens (like mobile devices). When clicked, it expands or collapses the navigation menu. The aria-* attributes improve page accessibility. -->
+                <span class="navbar-toggler-icon"></span>
+                <!-- The hamburger icon (three horizontal lines) that appears inside the navigation button when viewed on mobile devices. -->
+            </button>
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbar-start">
+                <!-- This container is used for the navigation menu that expands or collapses (hides) on smaller screens. The collapse navbar-collapse class applies Bootstrap styles to manage the collapsible behavior. The id="navbar-start" attribute links this container to the navigation button (hamburger button) defined earlier in data-bs-target="#navbar-start". -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Defines an unordered list (<ul>) that acts as a container for the navigation links. The navbar-nav class styles the list to integrate with the navigation bar. The ms-auto (margin-start-auto) class aligns the list items to the right of the navigation bar. mb-2 and mb-lg-0 adjust the bottom margins for different screen sizes. -->
+                    <li class="nav-item">
+                        <!-- Each <li> is a list item containing a navigation link. -->
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                        <!-- Each link (<a>) within the list is a clickable element that redirects the user to a section of the page or another page. The nav-link class styles the links to look like part of the navigation bar. The href="#" attribute defines the link destination; in this case, the # symbol indicates no specific redirection, but it is typically replaced with an identifier or URL. -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Carousel -->
+    <div id="carouselE1" class="carousel slide" data-bs-ride="carousel">
+        <!-- id="carouselE1": Unique identifier for the carousel, allowing it to be referenced in other parts of the code, like indicators or controls. class="carousel slide": Applies Bootstrap classes to create a sliding carousel. data-bs-ride="carousel": Configures the carousel to automatically transition between images (autoplay behavior). -->
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <!-- This container groups the buttons that act as slide indicators. -->
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="slide 1"></button>
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="1" aria-label="slide 2"></button>
+            <button type="button" data-bs-target="#carouselE1" data-bs-slide-to="2" aria-label="slide 3"></button>
+            <!-- type="button": Defines the element as a button. data-bs-target="#carouselE1": Links the button to the carousel identified by id="carouselE1". data-bs-slide-to="0": Indicates that this button leads to the first slide. Values 0, 1, 2, etc., represent the different slides in order. class="active": Used to mark the active indicator of the current slide (only applied to the first button). aria-current="true": Defines this slide as the current one for screen reader users (improves accessibility). aria-label="slide 1": Label describing the corresponding slide (also improves accessibility). -->
+        </div>
+
+        <!-- Carousel Content -->
+        <div class="carousel-inner">
+            <!-- Groups all carousel slides. This element is necessary for Bootstrap to identify and manage the slides. -->
+
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <!-- class="carousel-item": Defines this section as a slide within the carousel. class="active": Marks this slide as the one that initially appears when the carousel loads. -->
+                <img src="img/car1.jpg" class="d-block w-100" alt="">
+                <!-- src="img/car1.jpg": Path of the image displayed in the slide. class="d-block w-100": d-block: Makes the image a block-level element. w-100: Makes the image occupy 100% of the container's width. alt="": Space for alternative text (empty here) describing the image for accessibility. -->
+                <div class="carousel-caption">
+                    <!-- This container serves to display information overlaid on the image. -->
+                    <h5>The Best Engines</h5>
+                    <p>
+                        At BarranquillaMotors, we have high-quality engines and essential parts for various vehicles, ensuring durability and efficiency. You'll find complete replacement engines, components like pistons, connecting rods, and valves, plus solutions for engine repairs or replacements. We stand out for our superior quality, wide variety of parts, expert advice, and competitive prices. Visit us to keep your vehicle in excellent condition throughout all months of the year.
+                    </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Read More</a></p>
+                    <!-- <a href="#">: A link (currently without a destination) that acts as a button. class="btn btn-primary mt-3": btn btn-primary: Applies predefined Bootstrap button styles. mt-3: Adds a top margin to space the button from the previous text. The button can redirect the user to a page or section for more information. -->
+                </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <!-- Defines this section as a slide within the carousel. Note: Unlike the first slide, it does not have the active class, as it is not the initial slide displayed. -->
+                <img src="img/car2.png" class="d-block w-100" alt="">
+                <!-- src="img/car2.png": Path of the image displayed in this slide. class="d-block w-100": d-block: Makes the image a block-level element. w-100: Makes the image occupy the full width of the container. alt="": Space for alternative text (empty here) describing the image for accessibility. -->
+                <div class="carousel-caption">
+                    <!-- Contains the textual content overlaid on the image. -->
+                    <h5>All Types of Parts</h5>
+                    <p>
+                        We offer high-quality parts for all makes and models, ensuring your vehicle's performance, safety, and durability. Our catalog includes parts for engines, brakes, suspension, electrical systems, filters, lubricants, and accessories. We are distinguished by our product variety, guaranteed quality, and competitive prices. Additionally, our team of experts provides specialized advice to find the right parts, and we are committed to delivering exceptional service with personalized attention.
+                    </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Read More</a></p>
+                    <!-- <a href="#">: A link (currently without a destination) that acts as a button. class="btn btn-primary mt-3": btn btn-primary: Applies predefined Bootstrap button styles. mt-3: Adds a top margin to space the button from the previous text. The button can redirect the user to a page or section for more information. -->
+                </div>
+            </div>
+
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <!-- Defines this section as a slide within the carousel. Note: Unlike the first slide, it does not have the active class, as it is not the initial slide displayed. -->
+                <img src="img/car3.jpg" class="d-block w-100" alt="">
+                <!-- src="img/car3.jpg": Path of the image displayed in this slide. class="d-block w-100": d-block: Makes the image a block-level element. w-100: Makes the image occupy the full width of the container. alt="": Space for alternative text (empty here) describing the image for accessibility. -->
+                <div class="carousel-caption">
+                    <!-- Contains the textual content overlaid on the image. -->
+                    <h5>Electric Vehicles</h5>
+                    <p>
+                        We recently also handle a line of products for electric vehicles, offering high-quality parts and components. We specialize in batteries, traction systems, electronic components, regenerative brakes, and customization accessories, all tailored to the needs of electric cars. With a focus on innovation and sustainability, we guarantee durable products, professional advice, and a commitment to eco-friendly solutions. Visit us to keep your electric vehicle in excellent condition.
+                    </p>
+                    <p><a href="#" class="btn btn-primary mt-3">Read More</a></p>
+                    <!-- <a href="#">: A link (currently without a destination) that acts as a button. class="btn btn-primary mt-3": btn btn-primary: Applies predefined Bootstrap button styles. mt-3: Adds a top margin to space the button from the previous text. The button can redirect the user to a page or section for more information. -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE1" data-bs-slide="prev">
+            <!-- class="carousel-control-prev": Applies Bootstrap's default styles for the control button that moves the carousel backward. type="button": Defines the button as an interactive element. data-bs-target="#carouselE1": Indicates the ID of the carousel this button controls (carouselE1 in this case). data-bs-slide="prev": Specifies that this button will make the carousel go to the previous slide. -->
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!-- class="carousel-control-prev-icon": Applies a visual icon (typically an arrow pointing left). aria-hidden="true": Hides the icon from screen readers since it is decorative. -->
+            <span class="visually-hidden">Previous</span>
+            <!-- Provides a text label (visually hidden) that describes the button's function for screen readers. -->
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE1" data-bs-slide="next">
+            <!-- class="carousel-control-next": Applies Bootstrap's default styles for the control button that moves the carousel forward. type="button": Defines the button as interactive. data-bs-target="#carouselE1": Indicates that this button controls the carousel with ID carouselE1. data-bs-slide="next": Specifies that this button will move the carousel to the next slide. -->
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <!-- class="carousel-control-next-icon": Applies a visual icon (typically an arrow pointing right). aria-hidden="true": Hides the icon from screen readers. -->
+            <span class="visually-hidden">Next</span>
+            <!-- Provides a hidden text label to describe the button's function. -->
+        </button>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services">
+        <!-- Assigns a class to apply specific styles to this section. -->
+        <div class="container">
+            <!-- Contains the content within a centered container with proper margins. -->
+            <div class="row">
+                <!-- Creates a row containing the service cards. It's part of Bootstrap's grid system. -->
+
+                <!-- Service Card 1 -->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <!-- Defines the card size in Bootstrap's grid: Occupies full width on small screens (col-12). Occupies 1/3 of the width on large screens (col-lg-4). mb-3: Adds a bottom margin of 3 units to separate this card from others. -->
+                    <div class="card text-white text-center bg-car1 pb-2">
+                        <!-- Uses Bootstrap's class to style a card. text-white: Applies white color to the text. text-center: Centers the text content. bg-car1: Applies a custom background (likely defined in CSS styles). pb-2: Adds bottom internal padding (padding) of 2 units. -->
+                        <div class="card-body">
+                            <h3 class="card-title">Fog Lights</h3>
+                            <p>Drive confidently even in the worst weather conditions with our fog lights designed to offer superior performance. Made with resistant materials and advanced technology, these lights guarantee precise and powerful illumination.</p>
+                            <button class="btn bg-primary text-white">Read More</button>
+                            <!-- class="btn bg-primary text-white": Applies Bootstrap styles for a button: Blue background (bg-primary). White text (text-white). Button text: "Read More" to invite the user to get more information. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <!-- col-12: On small devices, occupies the full available width. col-md-12: On medium devices, also occupies full width. col-lg-4: On large devices, occupies one-third of the total width. mb-3: Adds a bottom margin to separate this card from others. -->
+                    <div class="card text-white text-center bg-car2 pb-2">
+                        <!-- card: Uses Bootstrap's card component. text-white: Applies white color to the text, ensuring contrast on a dark background. text-center: Centers the text content horizontally. bg-car2: Custom class defining the card's background. Could be a color, image, or gradient set in CSS. pb-2: Adds bottom internal padding (padding) of 2 units. -->
+                        <div class="card-body">
+                            <h3 class="card-title">Modern Painting</h3>
+                            <p>Give new life to your spaces with our modern painting service, ideal for homes, offices, and commercial spaces. With innovative techniques and impeccable finishes, we create unique environments that reflect your style and personality.</p>
+                            <button class="btn bg-primary text-white">Read More</button>
+                            <!-- btn class applies basic button styles. bg-primary: Applies a blue background color (Bootstrap style). text-white: Ensures the text is white for better readability. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <!-- col-12: On small devices, occupies the full available width. col-md-12: On medium devices, also occupies full width. col-lg-4: On large devices, occupies one-third of the total width. mb-3: Adds a bottom margin to separate this card from others. -->
+                    <div class="card text-white text-center bg-car3 pb-2">
+                        <!-- card: Uses Bootstrap's card component. text-white: Applies white color to the text, ensuring contrast on a dark background. text-center: Centers the text content horizontally. bg-car3: Custom class defining the card's background. Could be a color, image, or gradient set in CSS. pb-2: Adds bottom internal padding (padding) of 2 units. -->
+                        <div class="card-body">
+                            <h3 class="card-title">Custom Upholstery</h3>
+                            <p>Renew your car's interior with our custom upholstery service. Designed for those seeking style, comfort, and durability, our work transforms your vehicle's interior into a space that reflects your personality.</p>
+                            <button class="btn bg-primary text-white">Read More</button>
+                            <!-- btn class applies basic button styles. bg-primary: Applies a blue background color (Bootstrap style). text-white: Ensures the text is white for better readability. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons Section -->
+    <section class="section-icons">
+        <!-- Defines a specific section for icons. -->
+        <div class="row">
+            <!-- Starts a Bootstrap row, allowing organization of icons in a grid layout. -->
+
+            <!-- Icon 1 -->
+            <div class="col-12 col-md-12 col-lg-4 box-icons">
+                <!-- col-12: On small devices (phones), occupies the full available width. col-md-12: On medium devices (tablets), also occupies full width. col-lg-4: On large devices (desktops), occupies one-third of the width. box-icons: Custom class that can be used to add specific styles to each icon block. -->
+                <div class="d-flex align-items-center">
+                    <!-- d-flex: Activates flexbox to align elements horizontally. align-items-center: Ensures elements are vertically centered. -->
+                    <i class="bi bi-airplane"></i>
+                    <!-- <i>: Icon container. bi bi-airplane: A class from the Bootstrap Icons framework, providing ready-to-use icons. In this case, it represents an airplane, symbolizing the concept of "shipping". -->
+                    <div class="ms-4">
+                        <!-- Adds a left margin to the text to separate it from the icon (using Bootstrap class ms-4). -->
+                        <h3>Free Shipping</h3>
+                        <p>Enjoy free shipping on selected purchases. Save while equipping your car with the best.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icon 2 -->
+            <div class="col-12 col-md-12 col-lg-4 box-icons">
+                <!-- Organizes the layout in a responsive grid using Bootstrap classes: col-12: Occupies full width on small screens. col-md-12: Also occupies full width on medium screens. col-lg-4: On large screens, occupies one-third of the total width. box-icons: Custom class to add specific styles to each icon block. -->
+                <div class="d-flex align-items-center">
+                    <!-- d-flex: Activates Flexbox, organizing elements horizontally. align-items-center: Vertically aligns elements within the container, ensuring the icon and text are centered. -->
+                    <i class="bi bi-cash-coin"></i>
+                    <!-- <i>: Icon container. bi bi-cash-coin: A Bootstrap Icons class, providing a coin icon. This icon symbolizes financial concepts, such as refunds or money returns. -->
+                    <div class="ms-4">
+                        <!-- Applies a left margin to the text to visually separate it from the icon. -->
+                        <h3>Refund</h3>
+                        <p>We offer refunds within 30 days for unused products in their original packaging.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icon 3 -->
+            <div class="col-12 col-md-12 col-lg-4 box-icons">
+                <!-- Using Bootstrap classes, this container is responsive: col-12 and col-md-12: Occupies full width on small and medium screens. col-lg-4: Occupies one-third of the total width on large screens. box-icons: Custom class to style this icon block. -->
+                <div class="d-flex align-items-center">
+                    <!-- d-flex: Activates Flexbox to organize elements horizontally. align-items-center: Vertically centers elements within the container. -->
+                    <i class="bi bi-gift-fill"></i>
+                    <!-- <i>: Represents an icon. bi bi-gift-fill: A Bootstrap Icons class that generates a gift icon. This icon is ideal for representing promotions, bonuses, or gifts associated with the service. -->
+                    <div class="ms-4">
+                        <!-- Applies a left margin to the text to visually separate it from the icon. -->
+                        <h3>Gift</h3>
+                        <p>Receive a special gift on selected purchases. Reward your car with unique accessories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="product text-white">
+        <!-- Defines a semantic block grouping content related to products. class="product" may include specific styles, such as design and colors, making the section visually distinct. -->
+        <div class="container">
+            <!-- Should be container, a Bootstrap class to wrap content and align everything correctly in responsive design. -->
+
+            <!-- Section Header -->
+            <div class="row">
+                <!-- Activates a grid system to organize this section's content. -->
+                <div class="col-md-12">
+                    <!-- Occupies the full screen width on any device size (12 columns). -->
+                    <div class="section-header text-center pb-5">
+                        <!-- section-header: Custom class to define unique header styles (e.g., fonts, sizes, or margins). text-center: Centers the header text horizontally. pb-5: Adds a large bottom margin (padding-bottom) to space the header from the products. -->
+                        <h2>Products</h2>
+                        <p>
+                            In our store, you'll find a wide variety of high-quality auto parts <br> designed to ensure your vehicle's performance and safety.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Cards -->
+            <div class="row">
+                <!-- Activates a row within Bootstrap's grid system to organize the cards in a responsive layout. Each card will be a column within this row. -->
+
+                <!-- Product 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The card occupies the full screen width on small devices. col-md-6: On medium screens, occupies half the width (50%). col-lg-3: On large devices, occupies 3 of the 12 available columns (1/4 of the width). -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- <div class="card">: Creates a styled container (card) to encapsulate product information. Applied classes: bg-secondary: Gray background for the card. shadow-sm: Applies a slight shadow, giving a depth effect. border-0: Removes the card border. px-2 py-3: Adds internal padding (horizontal and vertical) to space the content. mb-4: Adds bottom margin to separate this card from others. -->
+                        <div class="text-center">
+                            <!-- Centers the product image horizontally. -->
+                            <img src="img/pr1.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Contains the textual information and action button within the card. -->
+                            <h5 class="card-title">Wheel - WH553-16S-BS</h5>
+                            <p>
+                                The 16-inch Spyder Performance wheel cover with two-tone black/silver finish is easy to install and compatible with most domestic and foreign vehicles with front and rear wheels. Made of ABS plastic resistant to oxidation, it features an adjustable retention ring that ensures a perfect fit. Universal application.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Links to a page with more information or actions (can be replaced with a real URL). btn btn-primary: Uses a predefined button style in Bootstrap with highlighted colors. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The card occupies full width on small devices. col-md-6: On medium screens, occupies half the width. col-lg-3: On large screens, occupies 1/4 of the total width. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- bg-secondary: Gray background. shadow-sm: Small shadow adding depth. border-0: No borders for a cleaner design. px-2 py-3 mb-4: Internal and external margins for spacing. -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally. -->
+                            <img src="img/pr2.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Contains the textual information and product button. -->
+                            <h5 class="card-title">Wheel - Pro Comp PXA7069-6883</h5>
+                            <p>
+                                The Pro Comp wheel stands out for its sporty multi-spoke design, matte black finish or chrome details, and lightweight construction in corrosion-resistant aluminum alloy. Compatible with pickup trucks and SUVs like Toyota, Nissan, GMC, Chevrolet, and Ford, it offers dimensions of 16x8 inches, -12 mm offset, and 6x5.5-inch bolt pattern.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Link that can redirect to more information or a specific action. btn btn-primary: Predefined Bootstrap button style with a striking design. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The card occupies full width on small screens. col-md-6: On medium screens, size adjusts automatically. col-lg-3: On large screens, occupies a quarter of the total width (25%), allowing 4 cards to align in a row. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Indicates content is within a card. bg-secondary: Applies a gray background. shadow-sm: Adds a light shadow for visual depth. border-0: Removes card borders for a cleaner design. px-2 py-3 mb-4: Adds internal and external margins to separate and space elements. -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally. -->
+                            <img src="img/pr3.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Container for textual content. -->
+                            <h5 class="card-title">Steering Wheel with Hub Adapter - Club Car Precedent - Black and Silver 2004+</h5>
+                            <p>
+                                Club Car Precedent golf cart with chrome-finished steering wheel and hub adapter compatible with 2004+ models. Includes black and silver wiring, horn, and Allen key to assemble the steering wheel. This product is exclusive for the Club Car Precedent model.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Link that may direct to a specific product page. btn btn-primary: Applies a predefined style for buttons in Bootstrap, with a highlighted color. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: Occupies full width on small screens. col-md-6: Adjusts size automatically on medium screens. col-lg-3: Occupies 25% of the total width on large screens, allowing up to 4 products to align in a row. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Indicates content is within a styled card. bg-secondary: Sets a gray background for the card. shadow-sm: Adds a light shadow for greater visual depth. border-0: Eliminates visible borders for a cleaner design. px-2 py-3 mb-4: Adds internal and external margins to space and organize the card. -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally within the container. -->
+                            <img src="img/pr4.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Container for text and action button. -->
+                            <h5 class="card-title">Engine - Plaxo Functional Mini V8 Model Kits</h5>
+                            <p>
+                                Plaxo's miniature V8 engines offer a fascinating construction kit for kids and adults, ideal for RC projects and car models. Made of metal, they include partial engine parts, with dimensions of 2.52 x 2.36 x 2.17 inches. Perfect for assembling functional engines with modern style, they are a unique experience.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Represents a link (currently non-functional) that could lead to the product details page. btn btn-primary: Applies a button style with a highlighted color. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The product occupies full width on small screens. col-md-6: On medium screens, adjusts its size automatically according to responsive design. col-lg-3: On large screens, occupies a quarter of the width, allowing four products to align horizontally. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Styled card container. bg-secondary: Applies a gray background to the card. shadow-sm: Adds a subtle shadow for a lifting effect. border-0: Eliminates visible borders. px-2 py-3 mb-4: Applies internal padding and external margins to space elements and cards. -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally. -->
+                            <img src="img/pr5.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Container for text and button. -->
+                            <h5 class="card-title">Wheel - Sport Aluminum Model Airvent 14x6.0 4x114 Dark Chrome Machined Set of 4 Wheels</h5>
+                            <p>
+                                The AIRVENT R14 wheel model by RADER, made of high-resistance aluminum, stands out for its metallic finish in machined dark chrome color. Weighing 9 kg and dimensions of 35.56 x 20.32 x 35.56 cm, it is compatible with dual drilling 4/114, ideal for cars with R14 size.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Represents a link that currently goes nowhere. btn btn-primary: Applies a styled design to the button, highlighting it with a primary color. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The product occupies full width on small screens. col-md-6 and col-lg-3: Automatically adjusts container size for medium and large screens, showing up to four products per row. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Represents a styled presentation card. bg-secondary: Gives a gray background to the card. shadow-sm: Adds a subtle shadow for a lifting effect. border-0: Eliminates visible borders. px-2 py-3 mb-4: Adds internal and external margins for content and card spacing. -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally within the container. -->
+                            <img src="img/pr6.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Container for text and button. -->
+                            <h5 class="card-title">High-End 2-in-1 Steering Wheel Lock - ARTAGO 870 - With or Without 120 dB Alarm</h5>
+                            <p>
+                                The most advanced steering wheel lock combines a 120 dBA alarm, pre-warning function, long-lasting CR2 battery, and striking yellow design. Made of special steel with high-security key, includes Press & Click system and articulated arms for greater protection. Since 1976, Artago offers high-end security.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": The link doesn't go anywhere yet but can be configured to direct to a product details page. btn btn-primary: Applies style to the button, making it visually striking. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: Makes the product occupy full width on small devices. col-md-6 and col-lg-3: Adjusts size on medium and large devices to show up to four products per row. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Defines the card layout. bg-secondary: Provides a gray background. shadow-sm: Adds a light shadow, creating a visual elevation effect. border-0: Eliminates visible borders. px-2 py-3 mb-4: Adds internal padding and space between cards (margin). -->
+                        <div class="text-center">
+                            <!-- Centers the image horizontally within the card. -->
+                            <img src="img/pr7.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <!-- Contains text and action button. -->
+                            <h5 class="card-title">Wheel - Konig DIAL IN Gloss Black Wheel with Paint and TPMS (15 x 8 inches /0.157 x 3.937 in, 0.984 in Offset)</h5>
+                            <p>
+                                The DIAL IN wheel model by KÖNIG, size 15" x 8", is made of aluminum with flow-forming technology, 12-spoke design, and gloss black finish. Weighing 12.25 pounds, pitch circle diameter of 100 mm, offset of 25 mm, and backspacing of 5.48".
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": Defines a link that can be configured to redirect to product detail. btn btn-primary: Button with style to attract attention. -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- col-12: The card occupies full width on small devices. col-md-6 col-lg-3: Adjusts size on medium and large screens, allowing up to 4 cards to be displayed per row. -->
+                    <div class="card bg-secondary shadow-sm border-0 px-2 py-3 mb-4">
+                        <!-- card: Defines a pre-styled card. bg-secondary: Applies a gray background. shadow-sm: Adds a light shadow for a three-dimensional effect. border-0: Eliminates visible borders for a minimalist design. px-2 py-3 mb-4: Adds internal padding and external margins to space the card. -->
+                        <div class="text-center">
+                            <!-- Centers the image within the container. -->
+                            <img src="img/pr8.png" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wheel - Sport 5/100 Avanza 22, Polo, Ibiza, Vento, Corolla</h5>
+                            <p>
+                                Sport wheels 17" with 7.5" width, completely new and made of aluminum. Compatible with 5 x 114 bolt pattern, ideal for KIA models (Forte, Optima, Sportage), Hyundai (Elantra, Santa Fe), Toyota (Prius 2023+, RAV4), Nissan (Sentra, Tiida), Mazda (CX3, CX5), Honda (Accord, Civic, CR-V) and Mitsubishi Lancer. Set of 4 Sportiva wheels.
+                            </p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <!-- href="#": The link can be configured to redirect to a product details page. btn btn-primary: Styled button to attract attention. -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <!-- The class allows applying specific banner custom styles via CSS. -->
+        <div class="container">
+            <!-- Central container ensuring content is aligned with consistent margins. -->
+            <div class="row">
+                <!-- Divides the section into a row to organize content. -->
+                <div class="col-md-12 text-center text-white">
+                    <!-- col-md-12: Defines that the column occupies 100% width on medium and larger devices. text-center: Aligns all content to the center to improve aesthetics and capture attention. -->
+                    <h2>The Best Parts for Your Car</h2>
+                    <p>
+                        In our store, we offer a wide selection of quality parts for your car, <br> including wheels, batteries, filters, brakes, and more. We work with trusted brands to ensure <br> durable, high-performance products. We provide expert advice and competitive prices.
+                    </p>
+                    <div>
+                        <img src="img/mo1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <!-- Defines a specific section for the contact form, with a class (contact) allowing custom styles. -->
+        <div class="container mb-3 mb-lg-5">
+            <!-- <div class="container">: A centralized container that aligns and structures the content, ensuring consistent margins. mb-3 mb-lg-5: Bootstrap classes adding small bottom margins on mobile devices (mb-3) and larger margins on large screens (mb-lg-5). -->
+            <div class="row">
+                <!-- Divides the section into a row to organize content. -->
+                <div class="col-md-12">
+                    <!-- Contact Section -->
+                    <div class="section-header text-center pb-2 pb-lg-5">
+                        <!-- Defines a header for the section with centered text (text-center) and bottom spacing (pb-2 and pb-lg-5). -->
+                        <h2>Contact</h2>
+                        <p>
+                            Do you have questions or need help with your parts? We are here to help you. <br> Fill out the form with your name, email, and message, and our team will respond shortly. <br> Your satisfaction is our priority. Don't hesitate to write to us and discover how we can assist you!
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <!-- Uses a Bootstrap flexible container to center the form horizontally. -->
+                        <div class="col-12 col-md-12 col-lg-6 pt-4 pb-4">
+                            <!-- Sets that the form occupies full width on small screens and adjusts to 50% width on large screens. -->
+                            <form action="#" class="bg-dark p-4 m-auto shadow-sm">
+                                <!-- bg-dark: Dark background for the form. p-4: Internal padding (spacing) of 4 units around the form. m-auto: Automatic margin to center vertically and horizontally. shadow-sm: Adds a light shadow to highlight the form. -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <!-- Adds bottom margin between fields. -->
+                                            <input class="form-control" placeholder="Name" type="text" required>
+                                            <!-- Input field for the user to write their name. -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <input class="form-control" placeholder="Email" type="email" required>
+                                            <!-- Field for the user to enter their email address. -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <textarea class="form-control" placeholder="Message" rows="3" required></textarea>
+                                            <!-- A text area for longer messages. -->
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Send</button>
+                                    <!-- Main form button: btn btn-primary: Applies standard Bootstrap button design with a primary style (blue). btn-lg: Defines a larger button size. btn-block: Makes the button occupy the full width of the container. mt-3: Adds a top margin to separate the button from the last field. Attribute type="submit": Changed to type="submit" to function as a form submission button. -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Section 1 -->
+                    <h5>About Us</h5>
+                    <p>At BarranquillaMotors, we have over 10 years of experience offering reliable, original, and generic parts from top brands. <br> We stand out for providing quick and effective solutions, with expert advice, competitive prices.</p>
+                </div>
+                <div class="col-md-3">
+                    <!-- Section 2 -->
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Mission & Vision</a></li>
+                        <li><a href="#" class="text-white">Legal Information</a></li>
+                        <li><a href="#" class="text-white">Customer Service</a></li>
+                        <li><a href="#" class="text-white">Frequently Asked Questions</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms and Conditions</a></li>
+                        <li><a href="#" class="text-white">Cookies & Site Data</a></li>
+                        <li><a href="#" class="text-white">Refund & Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <!-- Section 3 -->
+                    <h5>Contact Us</h5>
+                    <p>1234 ??? Street, Barranquilla, Atlantico, 56789</p>
+                    <p>Email: Barranquillamotors@gmail.com</p>
+                    <p>Phone: (+605) 3456780</p>
+                    <p>Mobile: (+57) 3456789000</p>
+                    <div class="social-icons">
+                        <a href="mailto:barranquillamotors@gmail.com" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.552L0 4.697zm6.761 3.612L1.24 12.255A2 2 0 0 0 2 14h12a2 2 0 0 0 .76-1.745L9.24 8.309l-2.48 2.48zm9.239-3.612l-5.803 3.552L16 11.801V4.697z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.whatsapp.com" target="_blank" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- Section 4 -->
+                    <h5>Our Location</h5>
+                    <div id="map-container" class="mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509377!2d144.96305791531696!3d-37.8141079797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d802d9e3e37f!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1616324322330!5m2!1sen!2sau" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 BarranquillaMotors. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
